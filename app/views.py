@@ -12,21 +12,22 @@ from projecto.settings import BASE_DIR
 #tree = etree.parse("top_artists.xml")
 #schema.assertValid(tree)
 
-def topglobal(request):
+def index(request):
 
-    fname = 'top_artists.xml'
-    pname = os.path.join(BASE_DIR, 'app/' + fname)
-    xml = etree.parse(pname)
+    return render(request, 'asd.html')
 
-    info = dict()
-    artists = xml.xpath('//artista')
-    for a in artists:
+#    fname = 'top_artists.xml'
+#    pname = os.path.join(BASE_DIR, 'app/' + fname)
+#    xml = etree.parse(pname)
+#    info = dict()
+#    artists = xml.xpath('//artista')
+#    for a in artists:
 
-        info['artist'] = a.find('artist')
-        print(info)
+#        info['artist'] = a.find('artist')
+#        print(info)
 
-    tparams = {
-        'info' : info,
-    }
+#    tparams = {
+#        'info' : info,
+#    }
 
-    return render(request, 'index/#topg.html', tparams)
+ #   return render(request, 'index/#topg.html', tparams)
