@@ -3,7 +3,7 @@ import os
 from django.http import Http404
 from django.shortcuts import render
 from lxml import etree
-
+import requests
 from projecto.settings import BASE_DIR
 
 #schemadoc = etree.parse("top_artists.xsd")
@@ -31,3 +31,7 @@ def index(request):
 #    }
 
  #   return render(request, 'index/#topg.html', tparams)
+
+def rss(request):
+    response = requests.get('https://www.billboard.com/feed/')
+    return HttpResponse(response)
