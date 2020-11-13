@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lfm" type="lfmType"/>
+  <xs:complexType name="artistType">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="mbid"/>
+      <xs:element type="xs:string" name="url"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="imageType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="size" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="albumType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:integer" name="playcount"/>
+      <xs:element type="xs:string" name="mbid" minOccurs="0"/>
+      <xs:element type="xs:string" name="url"/>
+      <xs:element type="artistType" name="artist"/>
+      <xs:element type="imageType" name="image" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="topalbumsType">
+    <xs:sequence>
+      <xs:element type="albumType" name="album" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="artist"/>
+    <xs:attribute type="xs:integer" name="page"/>
+    <xs:attribute type="xs:integer" name="perPage"/>
+    <xs:attribute type="xs:integer" name="totalPages"/>
+    <xs:attribute type="xs:integer" name="total"/>
+  </xs:complexType>
+  <xs:complexType name="lfmType">
+    <xs:sequence>
+      <xs:element type="topalbumsType" name="topalbums"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="status"/>
+  </xs:complexType>
+</xs:schema>

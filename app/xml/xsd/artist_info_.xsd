@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lfm" type="lfmType"/>
+  <xs:complexType name="imageType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="size" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="statsType">
+    <xs:sequence>
+      <xs:element type="xs:integer" name="listeners"/>
+      <xs:element type="xs:integer" name="playcount"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tagType">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="url" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tagsType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="tagType" name="tag"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="linkType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="rel"/>
+        <xs:attribute type="xs:string" name="href"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="linksType">
+    <xs:sequence>
+      <xs:element type="linkType" name="link"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bioType">
+    <xs:sequence>
+      <xs:element type="linksType" name="links"/>
+      <xs:element type="xs:string" name="published"/>
+      <xs:element type="xs:string" name="summary"/>
+      <xs:element type="xs:string" name="content"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="artistType">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="mbid" minOccurs="0"/>
+      <xs:element type="xs:string" name="url"/>
+      <xs:element type="imageType" name="image" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="xs:boolean" name="streamable"/>
+      <xs:element type="xs:boolean" name="ontour"/>
+      <xs:element type="statsType" name="stats"/>
+      <xs:element type="similarType" name="similar"/>
+      <xs:element type="tagsType" name="tags"/>
+      <xs:element type="bioType" name="bio"/>
+    </xs:choice>
+    <xs:anyAttribute/>
+  </xs:complexType>
+  <xs:complexType name="similarType">
+      <xs:choice minOccurs="0">
+          <xs:element type="artistType" name="artist" maxOccurs="unbounded"/>
+      </xs:choice> 
+  </xs:complexType>
+  <xs:complexType name="lfmType">
+    <xs:sequence>
+      <xs:element type="artistType" name="artist"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="status"/>
+  </xs:complexType>
+</xs:schema>
