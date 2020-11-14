@@ -54,7 +54,7 @@ def favorites(request):
 
  #   return render(request, 'index/#topg.html', tparams)
 
-def rss(request):
+def news(request):
     response_billboard = urlopen(Request('https://www.billboard.com/feed/', headers={'User-Agent' : 'Mozilla/5.0'})).read().decode('utf-8')
     tree = etree.fromstring(response_billboard.encode('utf-8'))
     link = tree.xpath("/rss/channel/link")
@@ -78,5 +78,5 @@ def rss(request):
     tparams = {
         'news' : news_array,     
     }
-    return render(request, 'newsfeed.html', tparams) 
+    return render(request, 'news.html', tparams) 
 
