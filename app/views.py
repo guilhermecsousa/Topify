@@ -14,9 +14,29 @@ from urllib.request import urlopen , Request
 #tree = etree.parse("top_artists.xml")
 #schema.assertValid(tree)
 
-def index(request):
+def homepage(request):
 
-    return render(request, 'asd.html')
+    return render(request, 'homepage.html')
+
+def topglobal(request):
+
+    return render(request, 'topglobal.html')
+
+def topport(request):
+
+    return render(request, 'topport.html')
+
+def news(request):
+
+    return render(request, 'news.html')
+
+def artist(request):
+
+    return render(request, 'artist.html')
+
+def favorites(request):
+
+    return render(request, 'favorites.html')
 
 #    fname = 'top_artists.xml'
 #    pname = os.path.join(BASE_DIR, 'app/' + fname)

@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- DataTale -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Top Global</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Artist</th>
+                                            <th>Song</th>
+                                            <th>Listeners</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Drake</td>
+                                            <td>Toosie Slide</td>
+                                            <td>320800</td>
+
+                                            <th style="width: 18%">
+                                                <a href="#" class="btn btn-success btn-icon-split btn-sm">
+                                                    <span class="icon text-white-50">
+                                                        <i class="fas fa-star"></i>
+                                                    </span>
+                                                    <span class="text">Add to Favorites</span>
+                                                </a>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+{% endblock %}

@@ -20,6 +20,10 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', views.index, name='index'),
-
+    path('homepage/', views.homepage, name='homepage'),
+    path('topglobal/', views.topglobal, name='topglobal'),
+    path('topport/', views.topport, name='topport'),
+    path('news/', views.news, name='news'),
+    path('artist/', views.artist, name='artist'),
+    path('favorites/', views.favorites, name='favorites'),
 ]
