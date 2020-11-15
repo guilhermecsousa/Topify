@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
@@ -13,14 +13,14 @@
                         <div class="col-lg-6">
 
                             <!-- Notícias -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Notícia Título</h6>
+                            {% for entry in news.entries %}
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary"><a href="{{ entry.link }}">{{ entry.title }}</a></h6>
+                                    </div>
+                                    <div class="card-body">{{ entry.summary }}</div>
                                 </div>
-                                <div class="card-body">
-                                    Isto é a notícia
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

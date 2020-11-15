@@ -7,16 +7,17 @@ from lxml import etree
 from projecto.settings import BASE_DIR
 from io import StringIO, BytesIO
 from urllib.request import urlopen , Request
-
+import feedparser
+from django.template.defaulttags import register
 #schemadoc = etree.parse("top_artists.xsd")
 #schema = etree.XMLSchema(schemadoc)
 #parser = etree.XMLParser(schema=schema)
 #tree = etree.parse("top_artists.xml")
 #schema.assertValid(tree)
 
-def homepage(request):
+def index(request):
 
-    return render(request, 'homepage.html')
+    return render(request, 'index.html')
 
 def topglobal(request):
 
@@ -26,10 +27,6 @@ def topport(request):
 
     return render(request, 'topport.html')
 
-def news(request):
-
-    return render(request, 'news.html')
-
 def artist(request):
 
     return render(request, 'artist.html')
@@ -38,45 +35,34 @@ def favorites(request):
 
     return render(request, 'favorites.html')
 
-#    fname = 'top_artists.xml'
-#    pname = os.path.join(BASE_DIR, 'app/' + fname)
-#    xml = etree.parse(pname)
-#    info = dict()
-#    artists = xml.xpath('//artista')
-#    for a in artists:
-
-#        info['artist'] = a.find('artist')
-#        print(info)
-
-#    tparams = {
-#        'info' : info,
-#    }
-
- #   return render(request, 'index/#topg.html', tparams)
-
 def news(request):
-    response_billboard = urlopen(Request('https://www.billboard.com/feed/', headers={'User-Agent' : 'Mozilla/5.0'})).read().decode('utf-8')
-    tree = etree.fromstring(response_billboard.encode('utf-8'))
-    link = tree.xpath("/rss/channel/link")
-    elem = tree.xpath("/rss/channel/title")
-    language = tree.xpath("/rss/channel/language") 
-    noticias = tree.xpath("/rss/channel/item")
-    news_array = [[] ]
-    i = 0
-    # the namespaces contained in this document
-    ns = {'dc': 'http://purl.org/dc/elements/1.1/',
-          'content': 'http://purl.org/rss/1.0/modules/content/', 
-          'media' : 'http://search.yahoo.com/mrss/'}
-    #array of news. each article is an array with title, link to the article, publication date, content and image of the article
-    for noticia in noticias:
-        news_array.append([noticia.find('title').text ,
-                           noticia.find('link').text ,
-                            noticia.find('pubDate').text ,
-                           noticia.find('content:encoded', ns).text, 
-                           noticia.find('media:thumbnail', ns).xpath("@url")[0]])                     
-        i = i + 1
+    feed = feedparser.parse('https://www.billboard.com/feed/')
     tparams = {
-        'news' : news_array,     
+        'news': feed,
     }
     return render(request, 'news.html', tparams) 
 
+# tree = etree.fromstring(response_billboard.encode('utf-8'))
+#     link = tree.xpath("/rss/channel/link")
+#     elem = tree.xpath("/rss/channel/title")
+#     language = tree.xpath("/rss/channel/language")
+#     noticias = tree.xpath("/rss/channel/item")
+#     news_array = [[]]
+#     i = 0
+#     # the namespaces contained in this document
+#     ns = {'dc': 'http://purl.org/dc/elements/1.1/',
+#           'content': 'http://purl.org/rss/1.0/modules/content/',
+#           'media' : 'http://search.yahoo.com/mrss/'}
+#     # array of news. each article is an array with title, link, publication date, content and image of the article
+#     for noticia in noticias:
+#         news_array.append([noticia.find('title').text ,
+#                            noticia.find('link').text ,
+#                            noticia.find('pubDate').text ,
+#                            noticia.find('content:encoded', ns).text,
+#                            noticia.find('media:thumbnail', ns).xpath("@url")[0]])
+#         i = i + 1
+#     print(news_array)
+#
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)
