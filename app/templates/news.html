@@ -13,12 +13,13 @@
                         <div class="col-lg-6">
 
                             <!-- Notícias -->
-                            {% for entry in news.entries %}
+                            {% for entry in news%}
                                 <div class="card shadow mb-4">
                                     <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary"><a href="{{ entry.link }}">{{ entry.title }}</a></h6>
+                                        <h6 class="m-0 font-weight-bold text-primary"><a href="">{{ entry.0 }}</a></h6>
+                                     <img src="{{entry.4}}"> </img>
                                     </div>
-                                    <div class="card-body">{{ entry.summary }}</div>
+                                    <div class="card-body">{{ entry.2}}</div>
                                 </div>
                             {% endfor %}
                         </div>

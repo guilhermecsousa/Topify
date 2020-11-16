@@ -1,0 +1,405 @@
+14:41:29.154	SERVER	admin	OK	Server was started (port: 1984).
+14:41:40.406	127.0.0.1:63542	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo()	5.09 ms
+14:41:40.958	127.0.0.1:63542	admin	REQUEST	EXEC[0]	551.03 ms
+14:41:40.958	127.0.0.1:63542	admin	ERROR	Stopped at ., 3/35: [XPST0017] funcs:giveSomeInfo: 0 arguments supplied, 1 expected.	0.15 ms
+14:41:40.972	127.0.0.1:63542	admin	REQUEST	EXIT	13.28 ms
+14:41:40.973	127.0.0.1:63542	admin	OK		0.86 ms
+14:43:27.168	127.0.0.1:63572	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo(a-ha)	0.27 ms
+14:43:27.192	127.0.0.1:63572	admin	REQUEST	EXEC[0]	23.79 ms
+14:43:27.193	127.0.0.1:63572	admin	ERROR	Stopped at ., 3/40: [XPDY0002] a-ha: Context is undeclared.	0.17 ms
+14:43:27.193	127.0.0.1:63572	admin	REQUEST	EXIT	0.37 ms
+14:43:27.194	127.0.0.1:63572	admin	OK		0.16 ms
+14:44:30.645	127.0.0.1:63582	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo(BTS)	0.29 ms
+14:44:30.649	127.0.0.1:63582	admin	REQUEST	EXEC[0]	3.53 ms
+14:44:30.649	127.0.0.1:63582	admin	ERROR	Stopped at ., 3/39: [XPDY0002] BTS: Context is undeclared.	0.16 ms
+14:44:30.650	127.0.0.1:63582	admin	REQUEST	EXIT	0.4 ms
+14:44:30.650	127.0.0.1:63582	admin	OK		0.23 ms
+14:44:51.013	127.0.0.1:63584	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo(BTS)	0.21 ms
+14:44:51.017	127.0.0.1:63584	admin	REQUEST	EXEC[0]	2.9 ms
+14:44:51.017	127.0.0.1:63584	admin	ERROR	Stopped at ., 3/39: [XPDY0002] BTS: Context is undeclared.	0.16 ms
+14:44:51.017	127.0.0.1:63584	admin	REQUEST	EXIT	0.39 ms
+14:44:51.018	127.0.0.1:63584	admin	OK		0.19 ms
+14:45:13.503	127.0.0.1:63590	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo()	0.26 ms
+14:45:13.506	127.0.0.1:63590	admin	REQUEST	EXEC[0]	2.66 ms
+14:45:13.506	127.0.0.1:63590	admin	ERROR	Stopped at ., 3/35: [XPST0017] funcs:giveSomeInfo: 0 arguments supplied, 1 expected.	0.22 ms
+14:45:13.507	127.0.0.1:63590	admin	REQUEST	EXIT	0.58 ms
+14:45:13.508	127.0.0.1:63590	admin	OK		0.31 ms
+14:45:28.031	127.0.0.1:63593	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo(BTS)	0.19 ms
+14:45:28.034	127.0.0.1:63593	admin	REQUEST	EXEC[0]	3.13 ms
+14:45:28.034	127.0.0.1:63593	admin	ERROR	Stopped at ., 3/39: [XPDY0002] BTS: Context is undeclared.	0.15 ms
+14:45:28.035	127.0.0.1:63593	admin	REQUEST	EXIT	0.4 ms
+14:45:28.035	127.0.0.1:63593	admin	OK		0.18 ms
+14:45:45.920	127.0.0.1:63598	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo("BTS")	0.16 ms
+14:45:45.933	127.0.0.1:63598	admin	REQUEST	EXEC[0]	13.29 ms
+14:45:45.934	127.0.0.1:63598	admin	ERROR	Stopped at /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm, 5/61: [XPTY0004] Number expected, xs:string found: "BTS".	0.27 ms
+14:45:45.934	127.0.0.1:63598	admin	REQUEST	EXIT	0.39 ms
+14:45:45.935	127.0.0.1:63598	admin	OK		0.18 ms
+14:47:17.433	127.0.0.1:63612	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo("BTS")	0.13 ms
+14:47:17.438	127.0.0.1:63612	admin	REQUEST	EXEC[0]	3.91 ms
+14:47:17.438	127.0.0.1:63612	admin	ERROR	Stopped at /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm, 5/21: [FODC0002] Resource '/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music/xml_artists_info/artist_info_BTS.xml' does not exist.	0.12 ms
+14:47:17.438	127.0.0.1:63612	admin	REQUEST	EXIT	0.35 ms
+14:47:17.439	127.0.0.1:63612	admin	OK		0.17 ms
+14:49:38.982	127.0.0.1:63642	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo("BTS")	0.16 ms
+14:49:38.985	127.0.0.1:63642	admin	REQUEST	EXEC[0]	2.73 ms
+14:49:38.985	127.0.0.1:63642	admin	ERROR	Stopped at /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm, 5/21: [FODC0002] Resource '/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/data/musicastop_db/xml_artists_info/artist_info_BTS.xml' does not exist.	0.13 ms
+14:49:38.986	127.0.0.1:63642	admin	REQUEST	EXIT	0.42 ms
+14:49:38.986	127.0.0.1:63642	admin	OK		0.17 ms
+14:50:50.517	127.0.0.1:63652	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo("BTS")	0.16 ms
+14:50:50.520	127.0.0.1:63652	admin	REQUEST	EXEC[0]	2.61 ms
+14:50:50.520	127.0.0.1:63652	admin	ERROR	Stopped at /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm, 5/21: [FODC0002] Resource '/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/musicastop_db/xml_artists_info/artist_info_BTS.xml' does not exist.	0.13 ms
+14:50:50.521	127.0.0.1:63652	admin	REQUEST	EXIT	0.45 ms
+14:50:50.521	127.0.0.1:63652	admin	OK		0.16 ms
+14:51:48.014	127.0.0.1:63659	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo("BTS")	0.14 ms
+14:51:48.017	127.0.0.1:63659	admin	REQUEST	EXEC[0]	2.54 ms
+14:51:48.017	127.0.0.1:63659	admin	ERROR	Stopped at /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm, 5/21: [FODC0002] Resource '/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/musicastop_db/xml_artists_info/artist_info_BTS.xml' does not exist.	0.13 ms
+14:51:48.017	127.0.0.1:63659	admin	REQUEST	EXIT	0.36 ms
+14:51:48.018	127.0.0.1:63659	admin	OK		0.24 ms
+14:54:36.714	127.0.0.1:63716	admin	OK	QUERY[0] import module namespace funcs="com.funcs.music" at "music.xqm"; funcs:giveSomeInfo("BTS")	0.17 ms
+14:54:36.803	127.0.0.1:63716	admin	OK	EXEC[0]	88.12 ms
+14:54:36.803	127.0.0.1:63716	admin	OK	CLOSE[0]	0.1 ms
+14:54:36.804	127.0.0.1:63716	admin	REQUEST	EXIT	0.4 ms
+14:54:36.804	127.0.0.1:63716	admin	OK		0.29 ms
+14:56:16.235	127.0.0.1:63743	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.17 ms
+14:56:16.243	127.0.0.1:63743	admin	OK	EXEC[0]	7.41 ms
+14:56:16.243	127.0.0.1:63743	admin	OK	CLOSE[0]	0.09 ms
+14:56:16.244	127.0.0.1:63743	admin	REQUEST	EXIT	0.41 ms
+14:56:16.244	127.0.0.1:63743	admin	OK		0.18 ms
+14:56:36.824	127.0.0.1:63751	admin	OK	QUERY[0] import module namespace funcs='com.funcs.' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.18 ms
+14:56:36.825	127.0.0.1:63751	admin	REQUEST	EXEC[0]	1.1 ms
+14:56:36.825	127.0.0.1:63751	admin	ERROR	Stopped at ., 1/43: [XQST0059] Imported module 'music.xqm' has unexpected namespace: 'com.funcs.' vs 'com.funcs.music'.	0.11 ms
+14:56:36.826	127.0.0.1:63751	admin	REQUEST	EXIT	0.34 ms
+14:56:36.826	127.0.0.1:63751	admin	OK		0.15 ms
+14:57:15.369	127.0.0.1:63768	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+14:57:15.375	127.0.0.1:63768	admin	OK	EXEC[0]	5.5 ms
+14:57:15.375	127.0.0.1:63768	admin	OK	CLOSE[0]	0.09 ms
+14:57:15.376	127.0.0.1:63768	admin	REQUEST	EXIT	0.37 ms
+14:57:15.376	127.0.0.1:63768	admin	OK		0.18 ms
+14:58:59.854	127.0.0.1:63798	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo(BTS)	0.2 ms
+14:58:59.857	127.0.0.1:63798	admin	REQUEST	EXEC[0]	2.78 ms
+14:58:59.858	127.0.0.1:63798	admin	ERROR	Stopped at ., 1/87: [XPDY0002] BTS: Context is undeclared.	0.2 ms
+14:58:59.858	127.0.0.1:63798	admin	REQUEST	EXIT	0.35 ms
+14:58:59.859	127.0.0.1:63798	admin	OK		0.18 ms
+14:59:29.254	127.0.0.1:63803	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+14:59:29.260	127.0.0.1:63803	admin	OK	EXEC[0]	4.99 ms
+14:59:29.260	127.0.0.1:63803	admin	OK	CLOSE[0]	0.07 ms
+14:59:29.261	127.0.0.1:63803	admin	REQUEST	EXIT	0.37 ms
+14:59:29.261	127.0.0.1:63803	admin	OK		0.16 ms
+14:59:41.681	127.0.0.1:63806	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+14:59:41.686	127.0.0.1:63806	admin	OK	EXEC[0]	4.73 ms
+14:59:41.686	127.0.0.1:63806	admin	OK	CLOSE[0]	0.06 ms
+14:59:41.687	127.0.0.1:63806	admin	REQUEST	EXIT	0.36 ms
+14:59:41.687	127.0.0.1:63806	admin	OK		0.15 ms
+15:01:06.750	127.0.0.1:63825	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.14 ms
+15:01:06.755	127.0.0.1:63825	admin	OK	EXEC[0]	4.81 ms
+15:01:06.755	127.0.0.1:63825	admin	OK	CLOSE[0]	0.06 ms
+15:01:06.756	127.0.0.1:63825	admin	REQUEST	EXIT	0.34 ms
+15:01:06.756	127.0.0.1:63825	admin	OK		0.19 ms
+15:06:25.976	SERVER	admin	OK	Server was stopped (port: 1984).
+15:24:58.710	SERVER	admin	OK	Server was started (port: 1984).
+15:26:14.019	127.0.0.1:64199	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	4.82 ms
+15:26:14.106	127.0.0.1:64199	admin	REQUEST	EXEC[0]	86.75 ms
+15:26:14.106	127.0.0.1:64199	admin	ERROR	Stopped at ., 1/65: [XQST0059] Could not retrieve module: /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/music.xqm.	0.14 ms
+15:26:14.133	127.0.0.1:64199	admin	REQUEST	EXIT	25.87 ms
+15:26:14.133	127.0.0.1:64199	admin	OK		0.58 ms
+15:27:50.568	127.0.0.1:64223	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.24 ms
+15:27:50.569	127.0.0.1:64223	admin	REQUEST	EXEC[0]	0.86 ms
+15:27:50.570	127.0.0.1:64223	admin	ERROR	Stopped at ., 1/65: [XQST0059] Could not retrieve module: /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/music.xqm.	0.19 ms
+15:27:50.571	127.0.0.1:64223	admin	REQUEST	EXIT	0.8 ms
+15:27:50.571	127.0.0.1:64223	admin	OK		0.48 ms
+15:27:59.641	SERVER	admin	OK	Server was stopped (port: 1984).
+15:28:43.571	SERVER	admin	OK	Server was started (port: 1984).
+15:28:49.784	127.0.0.1:64249	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	5.52 ms
+15:28:50.413	127.0.0.1:64249	admin	OK	EXEC[0]	628.63 ms
+15:28:50.414	127.0.0.1:64249	admin	OK	CLOSE[0]	0.14 ms
+15:28:50.434	127.0.0.1:64249	admin	REQUEST	EXIT	20.06 ms
+15:28:50.434	127.0.0.1:64249	admin	OK		0.42 ms
+15:32:20.158	127.0.0.1:64283	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.28 ms
+15:32:20.166	127.0.0.1:64283	admin	OK	EXEC[0]	7.63 ms
+15:32:20.167	127.0.0.1:64283	admin	OK	CLOSE[0]	0.1 ms
+15:32:20.167	127.0.0.1:64283	admin	REQUEST	EXIT	0.43 ms
+15:32:20.167	127.0.0.1:64283	admin	OK		0.2 ms
+15:32:34.712	127.0.0.1:64286	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+15:32:34.719	127.0.0.1:64286	admin	OK	EXEC[0]	6.62 ms
+15:32:34.719	127.0.0.1:64286	admin	OK	CLOSE[0]	0.13 ms
+15:32:34.720	127.0.0.1:64286	admin	REQUEST	EXIT	0.66 ms
+15:32:34.721	127.0.0.1:64286	admin	OK		0.31 ms
+15:32:36.002	127.0.0.1:64292	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.18 ms
+15:32:36.010	127.0.0.1:64292	admin	OK	EXEC[0]	7.61 ms
+15:32:36.010	127.0.0.1:64292	admin	OK	CLOSE[0]	0.1 ms
+15:32:36.011	127.0.0.1:64292	admin	REQUEST	EXIT	0.58 ms
+15:32:36.012	127.0.0.1:64292	admin	OK		0.32 ms
+15:33:02.935	127.0.0.1:64305	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.14 ms
+15:33:02.942	127.0.0.1:64305	admin	OK	EXEC[0]	6.25 ms
+15:33:02.942	127.0.0.1:64305	admin	OK	CLOSE[0]	0.2 ms
+15:33:02.943	127.0.0.1:64305	admin	REQUEST	EXIT	0.46 ms
+15:33:02.943	127.0.0.1:64305	admin	OK		0.2 ms
+15:36:55.973	127.0.0.1:64365	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.15 ms
+15:36:55.980	127.0.0.1:64365	admin	OK	EXEC[0]	6.13 ms
+15:36:55.980	127.0.0.1:64365	admin	OK	CLOSE[0]	0.1 ms
+15:36:55.981	127.0.0.1:64365	admin	REQUEST	EXIT	0.46 ms
+15:36:55.981	127.0.0.1:64365	admin	OK		0.2 ms
+15:38:48.674	127.0.0.1:64391	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.15 ms
+15:38:48.680	127.0.0.1:64391	admin	OK	EXEC[0]	6.1 ms
+15:38:48.680	127.0.0.1:64391	admin	OK	CLOSE[0]	0.12 ms
+15:38:48.681	127.0.0.1:64391	admin	REQUEST	EXIT	0.61 ms
+15:38:48.682	127.0.0.1:64391	admin	OK		0.31 ms
+15:47:27.816	127.0.0.1:64536	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.23 ms
+15:47:27.832	127.0.0.1:64536	admin	OK	EXEC[0]	15.75 ms
+15:47:27.833	127.0.0.1:64536	admin	OK	CLOSE[0]	0.07 ms
+15:47:27.833	127.0.0.1:64536	admin	REQUEST	EXIT	0.34 ms
+15:47:27.833	127.0.0.1:64536	admin	OK		0.22 ms
+15:48:00.335	127.0.0.1:64544	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.14 ms
+15:48:00.340	127.0.0.1:64544	admin	OK	EXEC[0]	4.41 ms
+15:48:00.340	127.0.0.1:64544	admin	OK	CLOSE[0]	0.11 ms
+15:48:00.341	127.0.0.1:64544	admin	REQUEST	EXIT	0.52 ms
+15:48:00.341	127.0.0.1:64544	admin	OK		0.18 ms
+15:59:16.328	127.0.0.1:64721	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+15:59:16.344	127.0.0.1:64721	admin	OK	EXEC[0]	14.32 ms
+15:59:16.344	127.0.0.1:64721	admin	OK	CLOSE[0]	0.06 ms
+15:59:16.345	127.0.0.1:64721	admin	REQUEST	EXIT	0.38 ms
+15:59:16.345	127.0.0.1:64721	admin	OK		0.16 ms
+17:51:52.952	127.0.0.1:50331	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	1.44 ms
+17:51:52.981	127.0.0.1:50331	admin	OK	EXEC[0]	27.04 ms
+17:51:52.982	127.0.0.1:50331	admin	OK	CLOSE[0]	0.1 ms
+17:51:52.984	127.0.0.1:50331	admin	REQUEST	EXIT	1.79 ms
+17:51:52.984	127.0.0.1:50331	admin	OK		0.21 ms
+17:52:31.536	127.0.0.1:50348	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+17:52:31.544	127.0.0.1:50348	admin	OK	EXEC[0]	7.6 ms
+17:52:31.544	127.0.0.1:50348	admin	OK	CLOSE[0]	0.09 ms
+17:52:31.545	127.0.0.1:50348	admin	REQUEST	EXIT	0.39 ms
+17:52:31.545	127.0.0.1:50348	admin	OK		0.16 ms
+17:52:57.069	127.0.0.1:50355	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.14 ms
+17:52:57.084	127.0.0.1:50355	admin	OK	EXEC[0]	15.24 ms
+17:52:57.085	127.0.0.1:50355	admin	OK	CLOSE[0]	0.06 ms
+17:52:57.086	127.0.0.1:50355	admin	REQUEST	EXIT	1.15 ms
+17:52:57.086	127.0.0.1:50355	admin	OK		0.17 ms
+17:52:58.230	127.0.0.1:50356	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+17:52:58.235	127.0.0.1:50356	admin	OK	EXEC[0]	3.9 ms
+17:52:58.235	127.0.0.1:50356	admin	OK	CLOSE[0]	0.07 ms
+17:52:58.236	127.0.0.1:50356	admin	REQUEST	EXIT	0.31 ms
+17:52:58.236	127.0.0.1:50356	admin	OK		0.13 ms
+17:52:58.850	127.0.0.1:50357	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+17:52:58.854	127.0.0.1:50357	admin	OK	EXEC[0]	3.72 ms
+17:52:58.854	127.0.0.1:50357	admin	OK	CLOSE[0]	0.05 ms
+17:52:58.854	127.0.0.1:50357	admin	REQUEST	EXIT	0.34 ms
+17:52:58.855	127.0.0.1:50357	admin	OK		0.14 ms
+17:52:59.148	127.0.0.1:50358	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+17:52:59.152	127.0.0.1:50358	admin	OK	EXEC[0]	3.89 ms
+17:52:59.152	127.0.0.1:50358	admin	OK	CLOSE[0]	0.06 ms
+17:52:59.152	127.0.0.1:50358	admin	REQUEST	EXIT	0.35 ms
+17:52:59.153	127.0.0.1:50358	admin	OK		0.14 ms
+17:53:49.923	127.0.0.1:50362	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+17:53:49.927	127.0.0.1:50362	admin	OK	EXEC[0]	3.74 ms
+17:53:49.928	127.0.0.1:50362	admin	OK	CLOSE[0]	0.07 ms
+17:53:49.928	127.0.0.1:50362	admin	REQUEST	EXIT	0.39 ms
+17:53:49.929	127.0.0.1:50362	admin	OK		0.14 ms
+17:54:08.266	127.0.0.1:50367	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+17:54:08.270	127.0.0.1:50367	admin	OK	EXEC[0]	3.84 ms
+17:54:08.271	127.0.0.1:50367	admin	OK	CLOSE[0]	0.1 ms
+17:54:08.271	127.0.0.1:50367	admin	REQUEST	EXIT	0.42 ms
+17:54:08.271	127.0.0.1:50367	admin	OK		0.17 ms
+17:54:20.168	127.0.0.1:50368	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+17:54:20.171	127.0.0.1:50368	admin	OK	EXEC[0]	3.63 ms
+17:54:20.172	127.0.0.1:50368	admin	OK	CLOSE[0]	0.06 ms
+17:54:20.172	127.0.0.1:50368	admin	REQUEST	EXIT	0.33 ms
+17:54:20.172	127.0.0.1:50368	admin	OK		0.13 ms
+17:54:45.732	127.0.0.1:50372	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+17:54:45.736	127.0.0.1:50372	admin	OK	EXEC[0]	3.6 ms
+17:54:45.736	127.0.0.1:50372	admin	OK	CLOSE[0]	0.06 ms
+17:54:45.737	127.0.0.1:50372	admin	REQUEST	EXIT	0.34 ms
+17:54:45.737	127.0.0.1:50372	admin	OK		0.13 ms
+17:55:24.196	127.0.0.1:50394	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+17:55:24.211	127.0.0.1:50394	admin	OK	EXEC[0]	14.65 ms
+17:55:24.212	127.0.0.1:50394	admin	OK	CLOSE[0]	0.07 ms
+17:55:24.212	127.0.0.1:50394	admin	REQUEST	EXIT	0.36 ms
+17:55:24.212	127.0.0.1:50394	admin	OK		0.15 ms
+17:56:20.860	127.0.0.1:50405	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+17:56:20.863	127.0.0.1:50405	admin	OK	EXEC[0]	3.44 ms
+17:56:20.864	127.0.0.1:50405	admin	OK	CLOSE[0]	0.05 ms
+17:56:20.864	127.0.0.1:50405	admin	REQUEST	EXIT	0.29 ms
+17:56:20.864	127.0.0.1:50405	admin	OK		0.12 ms
+17:56:34.323	127.0.0.1:50410	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+17:56:34.327	127.0.0.1:50410	admin	OK	EXEC[0]	3.63 ms
+17:56:34.342	127.0.0.1:50410	admin	OK	CLOSE[0]	0.15 ms
+17:56:34.343	127.0.0.1:50410	admin	REQUEST	EXIT	0.48 ms
+17:56:34.343	127.0.0.1:50410	admin	OK		0.21 ms
+18:01:05.915	127.0.0.1:50490	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+18:01:05.940	127.0.0.1:50490	admin	OK	EXEC[0]	18.37 ms
+18:01:05.940	127.0.0.1:50490	admin	OK	CLOSE[0]	0.08 ms
+18:01:05.941	127.0.0.1:50490	admin	REQUEST	EXIT	0.41 ms
+18:01:05.941	127.0.0.1:50490	admin	OK		0.17 ms
+18:01:15.906	127.0.0.1:50493	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.15 ms
+18:01:15.930	127.0.0.1:50493	admin	OK	EXEC[0]	23.55 ms
+18:01:15.931	127.0.0.1:50493	admin	OK	CLOSE[0]	0.1 ms
+18:01:15.931	127.0.0.1:50493	admin	REQUEST	EXIT	0.33 ms
+18:01:15.931	127.0.0.1:50493	admin	OK		0.16 ms
+18:03:07.055	127.0.0.1:50537	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.15 ms
+18:03:07.059	127.0.0.1:50537	admin	OK	EXEC[0]	3.56 ms
+18:03:07.059	127.0.0.1:50537	admin	OK	CLOSE[0]	0.06 ms
+18:03:07.060	127.0.0.1:50537	admin	REQUEST	EXIT	0.36 ms
+18:03:07.060	127.0.0.1:50537	admin	OK		0.14 ms
+18:03:35.717	127.0.0.1:50547	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+18:03:35.721	127.0.0.1:50547	admin	OK	EXEC[0]	3.41 ms
+18:03:35.721	127.0.0.1:50547	admin	OK	CLOSE[0]	0.06 ms
+18:03:35.722	127.0.0.1:50547	admin	REQUEST	EXIT	0.33 ms
+18:03:35.722	127.0.0.1:50547	admin	OK		0.13 ms
+18:05:13.081	127.0.0.1:50562	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.09 ms
+18:05:13.085	127.0.0.1:50562	admin	OK	EXEC[0]	3.43 ms
+18:05:13.085	127.0.0.1:50562	admin	OK	CLOSE[0]	0.05 ms
+18:05:13.085	127.0.0.1:50562	admin	REQUEST	EXIT	0.27 ms
+18:05:13.086	127.0.0.1:50562	admin	OK		0.13 ms
+18:05:29.093	127.0.0.1:50563	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.09 ms
+18:05:29.097	127.0.0.1:50563	admin	OK	EXEC[0]	3.49 ms
+18:05:29.097	127.0.0.1:50563	admin	OK	CLOSE[0]	0.04 ms
+18:05:29.098	127.0.0.1:50563	admin	REQUEST	EXIT	0.27 ms
+18:05:29.098	127.0.0.1:50563	admin	OK		0.13 ms
+18:05:43.030	127.0.0.1:50567	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+18:05:43.034	127.0.0.1:50567	admin	OK	EXEC[0]	4.22 ms
+18:05:43.034	127.0.0.1:50567	admin	OK	CLOSE[0]	0.04 ms
+18:05:43.035	127.0.0.1:50567	admin	REQUEST	EXIT	0.35 ms
+18:05:43.035	127.0.0.1:50567	admin	OK		0.16 ms
+18:09:45.637	127.0.0.1:50653	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.18 ms
+18:09:45.644	127.0.0.1:50653	admin	OK	EXEC[0]	6.81 ms
+18:09:45.645	127.0.0.1:50653	admin	OK	CLOSE[0]	0.07 ms
+18:09:45.645	127.0.0.1:50653	admin	REQUEST	EXIT	0.43 ms
+18:09:45.645	127.0.0.1:50653	admin	OK		0.14 ms
+18:19:20.625	127.0.0.1:50770	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.23 ms
+18:19:20.638	127.0.0.1:50770	admin	OK	EXEC[0]	13.05 ms
+18:19:20.639	127.0.0.1:50770	admin	OK	CLOSE[0]	0.05 ms
+18:19:20.639	127.0.0.1:50770	admin	REQUEST	EXIT	0.35 ms
+18:19:20.639	127.0.0.1:50770	admin	OK		0.13 ms
+18:19:21.548	127.0.0.1:50771	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.15 ms
+18:19:21.552	127.0.0.1:50771	admin	OK	EXEC[0]	3.98 ms
+18:19:21.553	127.0.0.1:50771	admin	OK	CLOSE[0]	0.09 ms
+18:19:21.554	127.0.0.1:50771	admin	REQUEST	EXIT	0.34 ms
+18:19:21.554	127.0.0.1:50771	admin	OK		0.15 ms
+18:19:52.814	127.0.0.1:50778	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.09 ms
+18:19:52.817	127.0.0.1:50778	admin	OK	EXEC[0]	3.6 ms
+18:19:52.818	127.0.0.1:50778	admin	OK	CLOSE[0]	0.06 ms
+18:19:52.818	127.0.0.1:50778	admin	REQUEST	EXIT	0.33 ms
+18:19:52.818	127.0.0.1:50778	admin	OK		0.12 ms
+18:26:37.371	127.0.0.1:50868	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+18:26:37.387	127.0.0.1:50868	admin	OK	EXEC[0]	15.57 ms
+18:26:37.387	127.0.0.1:50868	admin	OK	CLOSE[0]	0.09 ms
+18:26:37.388	127.0.0.1:50868	admin	REQUEST	EXIT	0.42 ms
+18:26:37.388	127.0.0.1:50868	admin	OK		0.14 ms
+18:26:58.464	127.0.0.1:50872	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+18:26:58.468	127.0.0.1:50872	admin	OK	EXEC[0]	3.8 ms
+18:26:58.468	127.0.0.1:50872	admin	OK	CLOSE[0]	0.05 ms
+18:26:58.469	127.0.0.1:50872	admin	REQUEST	EXIT	0.35 ms
+18:26:58.469	127.0.0.1:50872	admin	OK		0.17 ms
+18:27:15.766	127.0.0.1:50876	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.18 ms
+18:27:15.770	127.0.0.1:50876	admin	OK	EXEC[0]	3.92 ms
+18:27:15.770	127.0.0.1:50876	admin	OK	CLOSE[0]	0.05 ms
+18:27:15.771	127.0.0.1:50876	admin	REQUEST	EXIT	0.4 ms
+18:27:15.771	127.0.0.1:50876	admin	OK		0.13 ms
+18:27:55.069	127.0.0.1:50887	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+18:27:55.074	127.0.0.1:50887	admin	OK	EXEC[0]	4.47 ms
+18:27:55.074	127.0.0.1:50887	admin	OK	CLOSE[0]	0.05 ms
+18:27:55.075	127.0.0.1:50887	admin	REQUEST	EXIT	0.29 ms
+18:27:55.075	127.0.0.1:50887	admin	OK		0.15 ms
+18:28:16.861	127.0.0.1:50895	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+18:28:16.866	127.0.0.1:50895	admin	OK	EXEC[0]	3.99 ms
+18:28:16.866	127.0.0.1:50895	admin	OK	CLOSE[0]	0.04 ms
+18:28:16.866	127.0.0.1:50895	admin	REQUEST	EXIT	0.36 ms
+18:28:16.867	127.0.0.1:50895	admin	OK		0.14 ms
+18:28:18.524	127.0.0.1:50896	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.09 ms
+18:28:18.528	127.0.0.1:50896	admin	OK	EXEC[0]	3.91 ms
+18:28:18.529	127.0.0.1:50896	admin	OK	CLOSE[0]	0.05 ms
+18:28:18.529	127.0.0.1:50896	admin	REQUEST	EXIT	0.36 ms
+18:28:18.529	127.0.0.1:50896	admin	OK		0.12 ms
+18:28:20.389	127.0.0.1:50897	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+18:28:20.393	127.0.0.1:50897	admin	OK	EXEC[0]	3.97 ms
+18:28:20.394	127.0.0.1:50897	admin	OK	CLOSE[0]	0.06 ms
+18:28:20.394	127.0.0.1:50897	admin	REQUEST	EXIT	0.33 ms
+18:28:20.394	127.0.0.1:50897	admin	OK		0.2 ms
+18:28:21.151	127.0.0.1:50898	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+18:28:21.155	127.0.0.1:50898	admin	OK	EXEC[0]	4.06 ms
+18:28:21.155	127.0.0.1:50898	admin	OK	CLOSE[0]	0.04 ms
+18:28:21.156	127.0.0.1:50898	admin	REQUEST	EXIT	0.4 ms
+18:28:21.156	127.0.0.1:50898	admin	OK		0.12 ms
+18:50:52.399	127.0.0.1:51160	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	2.15 ms
+18:50:52.426	127.0.0.1:51160	admin	OK	EXEC[0]	24.5 ms
+18:50:52.426	127.0.0.1:51160	admin	OK	CLOSE[0]	0.1 ms
+18:50:52.428	127.0.0.1:51160	admin	REQUEST	EXIT	1.09 ms
+18:50:52.428	127.0.0.1:51160	admin	OK		0.71 ms
+18:51:13.115	127.0.0.1:51163	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+18:51:13.120	127.0.0.1:51163	admin	OK	EXEC[0]	5.18 ms
+18:51:13.120	127.0.0.1:51163	admin	OK	CLOSE[0]	0.05 ms
+18:51:13.121	127.0.0.1:51163	admin	REQUEST	EXIT	0.3 ms
+18:51:13.121	127.0.0.1:51163	admin	OK		0.13 ms
+18:52:31.219	127.0.0.1:51179	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+18:52:31.224	127.0.0.1:51179	admin	OK	EXEC[0]	5.19 ms
+18:52:31.225	127.0.0.1:51179	admin	OK	CLOSE[0]	0.06 ms
+18:52:31.225	127.0.0.1:51179	admin	REQUEST	EXIT	0.31 ms
+18:52:31.225	127.0.0.1:51179	admin	OK		0.14 ms
+18:54:19.366	127.0.0.1:51216	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+18:54:19.380	127.0.0.1:51216	admin	OK	EXEC[0]	13.05 ms
+18:54:19.380	127.0.0.1:51216	admin	OK	CLOSE[0]	0.05 ms
+18:54:19.381	127.0.0.1:51216	admin	REQUEST	EXIT	0.52 ms
+18:54:19.381	127.0.0.1:51216	admin	OK		0.15 ms
+19:08:48.528	127.0.0.1:51319	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.14 ms
+19:08:48.541	127.0.0.1:51319	admin	OK	EXEC[0]	11.95 ms
+19:08:48.541	127.0.0.1:51319	admin	OK	CLOSE[0]	0.05 ms
+19:08:48.542	127.0.0.1:51319	admin	REQUEST	EXIT	0.32 ms
+19:08:48.542	127.0.0.1:51319	admin	OK		0.15 ms
+19:09:11.302	127.0.0.1:51321	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+19:09:11.308	127.0.0.1:51321	admin	OK	EXEC[0]	6.36 ms
+19:09:11.309	127.0.0.1:51321	admin	OK	CLOSE[0]	0.06 ms
+19:09:11.309	127.0.0.1:51321	admin	REQUEST	EXIT	0.46 ms
+19:09:11.310	127.0.0.1:51321	admin	OK		0.23 ms
+19:09:40.676	127.0.0.1:51329	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+19:09:40.683	127.0.0.1:51329	admin	OK	EXEC[0]	6.01 ms
+19:09:40.683	127.0.0.1:51329	admin	OK	CLOSE[0]	0.12 ms
+19:09:40.684	127.0.0.1:51329	admin	REQUEST	EXIT	0.41 ms
+19:09:40.684	127.0.0.1:51329	admin	OK		0.15 ms
+19:09:54.414	127.0.0.1:51336	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.12 ms
+19:09:54.419	127.0.0.1:51336	admin	OK	EXEC[0]	5.66 ms
+19:09:54.420	127.0.0.1:51336	admin	OK	CLOSE[0]	0.05 ms
+19:09:54.420	127.0.0.1:51336	admin	REQUEST	EXIT	0.29 ms
+19:09:54.420	127.0.0.1:51336	admin	OK		0.15 ms
+19:10:08.783	127.0.0.1:51343	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+19:10:08.789	127.0.0.1:51343	admin	OK	EXEC[0]	5.53 ms
+19:10:08.789	127.0.0.1:51343	admin	OK	CLOSE[0]	0.05 ms
+19:10:08.790	127.0.0.1:51343	admin	REQUEST	EXIT	0.31 ms
+19:10:08.790	127.0.0.1:51343	admin	OK		0.15 ms
+19:10:21.886	127.0.0.1:51351	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+19:10:21.889	127.0.0.1:51351	admin	OK	EXEC[0]	3.8 ms
+19:10:21.890	127.0.0.1:51351	admin	OK	CLOSE[0]	0.04 ms
+19:10:21.890	127.0.0.1:51351	admin	REQUEST	EXIT	0.33 ms
+19:10:21.890	127.0.0.1:51351	admin	OK		0.14 ms
+19:10:29.294	127.0.0.1:51358	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+19:10:29.299	127.0.0.1:51358	admin	OK	EXEC[0]	4.86 ms
+19:10:29.299	127.0.0.1:51358	admin	OK	CLOSE[0]	0.04 ms
+19:10:29.300	127.0.0.1:51358	admin	REQUEST	EXIT	0.32 ms
+19:10:29.300	127.0.0.1:51358	admin	OK		0.14 ms
+19:10:35.896	127.0.0.1:51365	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+19:10:35.901	127.0.0.1:51365	admin	OK	EXEC[0]	5.1 ms
+19:10:35.902	127.0.0.1:51365	admin	OK	CLOSE[0]	0.06 ms
+19:10:35.902	127.0.0.1:51365	admin	REQUEST	EXIT	0.3 ms
+19:10:35.902	127.0.0.1:51365	admin	OK		0.13 ms
+19:11:08.546	127.0.0.1:51372	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.16 ms
+19:11:08.552	127.0.0.1:51372	admin	OK	EXEC[0]	5.43 ms
+19:11:08.552	127.0.0.1:51372	admin	OK	CLOSE[0]	0.08 ms
+19:11:08.553	127.0.0.1:51372	admin	REQUEST	EXIT	0.34 ms
+19:11:08.553	127.0.0.1:51372	admin	OK		0.14 ms
+19:11:50.775	127.0.0.1:51379	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+19:11:50.780	127.0.0.1:51379	admin	OK	EXEC[0]	5.34 ms
+19:11:50.781	127.0.0.1:51379	admin	OK	CLOSE[0]	0.06 ms
+19:11:50.781	127.0.0.1:51379	admin	REQUEST	EXIT	0.42 ms
+19:11:50.781	127.0.0.1:51379	admin	OK		0.22 ms
+19:17:09.703	127.0.0.1:51424	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.1 ms
+19:17:09.708	127.0.0.1:51424	admin	OK	EXEC[0]	4.39 ms
+19:17:09.708	127.0.0.1:51424	admin	OK	CLOSE[0]	0.05 ms
+19:17:09.709	127.0.0.1:51424	admin	REQUEST	EXIT	0.47 ms
+19:17:09.709	127.0.0.1:51424	admin	OK		0.2 ms
+19:19:05.603	127.0.0.1:51441	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.11 ms
+19:19:05.607	127.0.0.1:51441	admin	OK	EXEC[0]	3.96 ms
+19:19:05.608	127.0.0.1:51441	admin	OK	CLOSE[0]	0.05 ms
+19:19:05.608	127.0.0.1:51441	admin	REQUEST	EXIT	0.36 ms
+19:19:05.609	127.0.0.1:51441	admin	OK		0.2 ms
+19:19:36.035	127.0.0.1:51442	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo('BTS')	0.13 ms
+19:19:36.039	127.0.0.1:51442	admin	OK	EXEC[0]	3.86 ms
+19:19:36.040	127.0.0.1:51442	admin	OK	CLOSE[0]	0.05 ms
+19:19:36.040	127.0.0.1:51442	admin	REQUEST	EXIT	0.28 ms
+19:19:36.040	127.0.0.1:51442	admin	OK		0.13 ms
