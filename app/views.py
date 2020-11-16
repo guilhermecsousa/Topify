@@ -18,7 +18,7 @@ def index(request):
 def topglobal(request):
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     try:
-        input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo({})".format("'BTS'")
+        input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopGlobal()" #.format("'BTS'")
         query = session.query(input)
         res = query.execute()
         query.close()
@@ -26,9 +26,9 @@ def topglobal(request):
         if session:
             session.close()
     tparams = {
-        "info" : xmltodict.parse(res)['artistas']['name'],   
+        "info" : xmltodict.parse(res)['artistas']['artist'],   
     }
-    return render(request, 'topglobal.html')
+    return render(request, 'topglobal.html', tparams)
 
 def topport(request):
 

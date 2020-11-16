@@ -23,6 +23,13 @@ declare function funcs:giveTopGlobal() as node()
 </artistas>
 }; 
 
+declare function funcs:givePlaylist() as element()
+{
+    for $a in doc("playlist.xml")//playlist
+    return
+      $a
+}; 
+
 declare function funcs:giveTopPortugal() as node()
 {
   <artistas> {

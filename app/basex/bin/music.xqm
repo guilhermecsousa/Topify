@@ -21,7 +21,7 @@ declare function funcs:giveTopGlobal() as node()
       </artist>
  }
 </artistas>
-}; 
+};  
 
 declare function funcs:giveTopPortugal() as node()
 {

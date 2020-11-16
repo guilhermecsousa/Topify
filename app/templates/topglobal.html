@@ -19,15 +19,14 @@
                                     <thead>
                                         <tr>
                                             <th>Artist</th>
-                                            <th>Song</th>
                                             <th>Listeners</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {% for n in info %}
                                         <tr>
-                                            <td>Drake</td>
-                                            <td>Toosie Slide</td>
-                                            <td>320800</td>
+                                            <td>{{n.name}}</td>
+                                            <td>{{n.listeners}}</td>
 
                                             <th style="width: 18%">
                                                 <a href="#" class="btn btn-success btn-icon-split btn-sm">
@@ -38,6 +37,7 @@
                                                 </a>
                                             </th>
                                         </tr>
+                                        {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
