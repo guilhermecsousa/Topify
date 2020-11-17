@@ -11,11 +11,14 @@ from urllib.request import urlopen , Request
 import feedparser
 from django.template.defaulttags import register
 from BaseXClient import BaseXClient
+import os
 def index(request):
 
     return render(request, 'index.html')
 
-def topglobal(request):
+def artistglobal(request):
+    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.system(" python3 validate_top_artists.py")
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     try:
         input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopGlobal()" #.format("'BTS'")
@@ -30,16 +33,65 @@ def topglobal(request):
     }
     return render(request, 'topglobal.html', tparams)
 
-def topport(request):
+def artistport(request):
+    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.system(" python3 validate_top_artistsPT.py")
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopPortugal()" 
+        query = session.query(input)
+        res = query.execute()
+        query.close()
+    finally:
+        if session:
+            session.close()
+    tparams = {
+        "info" : xmltodict.parse(res)['artistas']['artist'],   
+    }
+    return render(request, 'topport.html', tparams)
 
-    return render(request, 'topport.html')
+def trackglobal(request):
+    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.system(" python3 validate_top_songs.py")
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopSongsGlobal()"
+        query = session.query(input)
+        res = query.execute()
+        query.close()
+    finally:
+        if session:
+            session.close()
+    tparams = {
+        "info" : xmltodict.parse(res)['songs']['song'],   
+    }
+    return(render, 'trackglobal.html', tparams)
+
+def trackport(request):
+    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.system(" python3 validate_top_songsPT.py")
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopSongsPT()" 
+        query = session.query(input)
+        res = query.execute()
+        query.close()
+    finally:
+        if session:
+            session.close()
+    tparams = {
+        "info" : xmltodict.parse(res)['songs']['song'],   
+    }
+    return(render, 'trackport.html')
+
 
 def artist(request):
 
     return render(request, 'artist.html')
 
 def favorites(request):
-
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    
     return render(request, 'favorites.html')
 
 def news(request):

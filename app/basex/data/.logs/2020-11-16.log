@@ -506,3 +506,13 @@
 22:30:07.814	127.0.0.1:52841	admin	OK	EXEC[0]	4.91 ms
 22:30:07.815	127.0.0.1:52841	admin	REQUEST	EXIT	0.4 ms
 22:30:07.815	127.0.0.1:52841	admin	OK		0.19 ms
+23:52:49.804	127.0.0.1:53278	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopSongsPT()	0.1 ms
+23:52:49.809	127.0.0.1:53278	admin	OK	EXEC[0]	4.4 ms
+23:52:49.809	127.0.0.1:53278	admin	OK	CLOSE[0]	0.03 ms
+23:52:49.809	127.0.0.1:53278	admin	REQUEST	EXIT	0.24 ms
+23:52:49.809	127.0.0.1:53278	admin	OK		0.09 ms
+23:53:11.650	127.0.0.1:53279	admin	OK	QUERY[0] import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopSongsPT()	0.07 ms
+23:53:11.655	127.0.0.1:53279	admin	OK	EXEC[0]	4.25 ms
+23:53:11.655	127.0.0.1:53279	admin	OK	CLOSE[0]	0.04 ms
+23:53:11.656	127.0.0.1:53279	admin	REQUEST	EXIT	0.23 ms
+23:53:11.656	127.0.0.1:53279	admin	OK		0.09 ms

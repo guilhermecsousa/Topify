@@ -21,9 +21,12 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index, name='index'),
-    path('topglobal/', views.topglobal, name='topglobal'),
-    path('topport/', views.topport, name='topport'),
+    path('', views.index, name='index'),
     path('news/', views.news, name='news'),
     path('artist/', views.artist, name='artist'),
     path('favorites/', views.favorites, name='favorites'),
+    path('trackglobal/', views.trackglobal, name='trackglobal'),
+    path('trackport/', views.trackport, name='trackport'),
+    path('artistglobal/', views.artistglobal, name='artistglobal'),
+    path('artistport/', views.artistport, name='artistport'),
 ]
