@@ -1,5 +1,5 @@
 # Paths
-INPUTPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/
+INPUTPATH = /home/guilhermecsousa/Desktop/EDC/proj1/EDC-TP1/app/xml
 DATAPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
 WORKPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/
 PROJECTPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
@@ -88,26 +88,12 @@ SEARCH = 0
 XQUERY = 0
 
 # Files
-EDITOR = 11
-EDITOR1 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/music.xqm
-EDITOR2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/ad.bxs
-EDITOR3 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/webapp/chat/chat-util.xqm
-EDITOR4 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/hello-world.xq
-EDITOR5 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/playlist.xml
-EDITOR6 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/readme.txt
-EDITOR7 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm
-EDITOR8 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/webapp/dba/files/file-stop.xqm
-EDITOR9 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/webapp/dba/files/dir-change.xqm
-EDITOR10 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/webapp/chat/chat-ws.xqm
-EDITOR11 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/top_artists.xml
-INPUTS = 2
-INPUTS1 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/
-INPUTS2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
-OPEN = 4
-OPEN1 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/playlist.xml
-OPEN2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/music.xqm
-OPEN3 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/hello-world.xq
-OPEN4 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/ad.bxs
+EDITOR = 0
+INPUTS = 3
+INPUTS1 = /home/guilhermecsousa/Desktop/EDC/proj1/EDC-TP1/app/xml
+INPUTS2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/
+INPUTS3 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
+OPEN = 0
 PROJECTS = 0
 PROJFILES = 0
 PROJCONTS = 0

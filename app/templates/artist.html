@@ -5,29 +5,40 @@
     <!-- Main Content -->
     <div id="content">
         <div class="row justify-content-center">
+
             <div class="col-xl-10 col-lg-12 col-md-9">
+
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-
+                        <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 45rem;"
-                                    {% load static %}
-                                    src="{% static 'assets/images/chico.jpg' %}"/>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                {% load static %}
+                                <img src="{% static 'assets/images/freebird.png' %}" style="height: 100%; width: 110%">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
-                                    <h3><b><a target="_blank" rel="nofollow" href="https://undraw.co/">CHICO DA TINA</a></b></h3>
-                                    <h5> Detalhes: </h5>
-                                    <a>............</a>
-                                    <a>..........</a>
+                                    <div class="text-center">
+                                        <h2>NOME</h2>
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless" id="dataTable" width="100%" cellspacing="0">
+                                                <tbody>
+                                                    <tr><td><b>Listeners:</b></td><td>VALOR</td></tr>
+                                                    <tr><td><b>Playcount:</b></td><td>VALOR</td></tr>
+                                                    <tr><td><b>Álbuns:</b></td><td>VALOR</td></tr>
+                                                    <tr><td><b>Sobre:</b></td><td>VALOR</td></tr>
+                                                    <tr><td><b>Semelhantes:</b></td><td>VALOR</td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-            </div>
     <!-- End of Main Content -->
 
 {% endblock %}

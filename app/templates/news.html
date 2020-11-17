@@ -7,23 +7,35 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+                    <h3>ÚLTIMA HORA:</h3>
+                    <br/>
+                    <!-- Notícias -->
                     <div class="row">
-
-                        <div class="col-lg-6">
-
-                            <!-- Notícias -->
-                            {% for entry in news%}
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary"><a href="">{{ entry.0 }}</a></h6>
-                                     <img src="{{entry.4}}"> </img>
+                        {% for entry in news %}
+                            {% if entry|length != 0 %}
+                                <ul class="col-lg-6">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">{{ entry.0 }}</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col mr-2">
+                                                    <div class="text">
+                                                        {{ entry.3 }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <img src="{{entry.4}}"/>
+                                                </div>
+                                            </div>
+                                            <a target="_blank" rel="nofollow" href="{{ entry.1 }}">Saber mais &rarr;</a>
+                                        </div>
                                     </div>
-                                    <div class="card-body">{{ entry.2}}</div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
+                                </ul>
+                            {% endif %}
+                        {% endfor %}
+                   </div>
                 </div>
             </div>
     <!-- End of Main Content -->

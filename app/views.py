@@ -12,13 +12,17 @@ import feedparser
 from django.template.defaulttags import register
 from BaseXClient import BaseXClient
 import os
+
+
 def index(request):
 
     return render(request, 'index.html')
 
+
 def artistglobal(request):
-    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.chdir("app/xml/scripts/")
     os.system(" python3 validate_top_artists.py")
+    os.chdir("../../../")
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     try:
         input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopGlobal()" #.format("'BTS'")
@@ -29,13 +33,15 @@ def artistglobal(request):
         if session:
             session.close()
     tparams = {
-        "info" : xmltodict.parse(res)['artistas']['artist'],   
+        "info": xmltodict.parse(res)['artistas']['artist'],
     }
-    return render(request, 'topglobal.html', tparams)
+    return render(request, 'artistglobal.html', tparams)
+
 
 def artistport(request):
-    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.chdir("app/xml/scripts/")
     os.system(" python3 validate_top_artistsPT.py")
+    os.chdir("../../../")
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     try:
         input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopPortugal()" 
@@ -46,13 +52,15 @@ def artistport(request):
         if session:
             session.close()
     tparams = {
-        "info" : xmltodict.parse(res)['artistas']['artist'],   
+        "info": xmltodict.parse(res)['artistas']['artist'],
     }
-    return render(request, 'topport.html', tparams)
+    return render(request, 'artistport.html', tparams)
+
 
 def trackglobal(request):
-    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.chdir("app/xml/scripts/")
     os.system(" python3 validate_top_songs.py")
+    os.chdir("../../../")
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     try:
         input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopSongsGlobal()"
@@ -63,13 +71,15 @@ def trackglobal(request):
         if session:
             session.close()
     tparams = {
-        "info" : xmltodict.parse(res)['songs']['song'],   
+        "info": xmltodict.parse(res)['songs']['song'],
     }
-    return(render, 'trackglobal.html', tparams)
+    return render(request, 'trackglobal.html', tparams)
+
 
 def trackport(request):
-    os.chdir("/Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/scripts/")
+    os.chdir("app/xml/scripts/")
     os.system(" python3 validate_top_songsPT.py")
+    os.chdir("../../../")
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     try:
         input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveTopSongsPT()" 
@@ -80,19 +90,21 @@ def trackport(request):
         if session:
             session.close()
     tparams = {
-        "info" : xmltodict.parse(res)['songs']['song'],   
+        "info": xmltodict.parse(res)['songs']['song'],
     }
-    return(render, 'trackport.html')
+    return render(request, 'trackport.html', tparams)
 
 
 def artist(request):
 
     return render(request, 'artist.html')
 
+
 def favorites(request):
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
     
     return render(request, 'favorites.html')
+
 
 def news(request):
     response_billboard = urlopen(Request('https://www.billboard.com/feed/', headers={'User-Agent' : 'Mozilla/5.0'})).read().decode('utf-8')
@@ -110,11 +122,11 @@ def news(request):
     for noticia in noticias:
         news_array.append([noticia.find('title').text ,
                            noticia.find('link').text ,
-                            noticia.find('pubDate').text ,
+                           noticia.find('pubDate').text ,
                            noticia.find('description', ns).text,
                            noticia.find('media:thumbnail', ns).xpath("@url")[0]])
     tparams = {
-        'news' : news_array,
+        'news': news_array,
     }
     return render(request, 'news.html', tparams) 
 
