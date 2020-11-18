@@ -9,8 +9,8 @@ cd bin ;
 ./basexserver ; 
 
 BaseX config: 
-sudo jar file 
-preferences
-define database path
-confirm right path in database properties
+sudo jar file ; 
+preferences ; 
+define database path ; 
+confirm right path in database properties ; 
 optimize all
