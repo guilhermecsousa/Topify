@@ -12,7 +12,8 @@ import feedparser
 from django.template.defaulttags import register
 from BaseXClient import BaseXClient
 import os
-
+import re
+from django.shortcuts import redirect
 
 def index(request):
 
@@ -70,11 +71,47 @@ def trackglobal(request):
     finally:
         if session:
             session.close()
+
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        input2 = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:trackFromPlaylist()"
+        query2 = session.query(input2)
+        res2 = query2.execute()
+        query2.close()
+    finally:
+        if session:
+            session.close()
+
+    song = dict()
+    song2 = dict()
+
+    song = xmltodict.parse(res)['songs']['song']
+    if res2 != None and res2 != '' and res2 != "<tracks/>":
+        song2 = xmltodict.parse(res2)['tracks']['track']
+        print(song2)
+        for s in song:
+            try:
+                for s2 in song2:
+                    print(song2)
+                    if s['name']== s2['name'] and s['artist']==s2['artist']['name']:
+                        s['in_fav'] = True
+                        break
+                    else:
+                        s['in_fav'] = False
+            except:
+                if s['name']== song2['name'] and s['artist']==song2['artist']['name']:
+                    s['in_fav'] = True
+                    break
+                else:
+                    s['in_fav'] = False
+    else:
+        for s in song:
+            s['in_fav'] = False
+
     tparams = {
-        "info": xmltodict.parse(res)['songs']['song'],
+        "info": song,
     }
     return render(request, 'trackglobal.html', tparams)
-
 
 def trackport(request):
     os.chdir("app/xml/scripts/")
@@ -89,9 +126,44 @@ def trackport(request):
     finally:
         if session:
             session.close()
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        input2 = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:trackFromPlaylist()"
+        query2 = session.query(input2)
+        res2 = query2.execute()
+        query2.close()
+    finally:
+        if session:
+            session.close()
+
+    song = dict()
+    song2 = dict()
+    song = xmltodict.parse(res)['songs']['song']
+    if res2 != None and res2 != '' and res2 != "<tracks/>":
+        song2 = xmltodict.parse(res2)['tracks']['track']
+        for s in song:
+            try:
+                for s2 in song2:
+                    print(song2)
+                    if s['name']== s2['name'] and s['artist']==s2['artist']['name']:
+                        s['in_fav'] = True
+                        break
+                    else:
+                        s['in_fav'] = False
+            except:
+                if s['name']== song2['name'] and s['artist']==song2['artist']['name']:
+                    s['in_fav'] = True
+                    break
+                else:
+                    s['in_fav'] = False
+
+    else:
+        for s in song:
+            s['in_fav'] = False
     tparams = {
-        "info": xmltodict.parse(res)['songs']['song'],
+        "info": song,
     }
+
     return render(request, 'trackport.html', tparams)
 
 
@@ -102,11 +174,64 @@ def artist(request):
 
 def favorites(request):
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
-    
-    return render(request, 'favorites.html')
+    try:
+        input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:trackFromPlaylist()"
+        query = session.query(input)
+        res = query.execute()
+        print(res)
+        query.close()
+    finally:
+        if session:
+            session.close()
+    dictionary = dict()
+    boolwean = False  
+    if res != None and res != '' and res != "<tracks/>":
+        dictionary = xmltodict.parse(res)['tracks']['track']
+        boolwean = True
+    tparams = {
+            "info" : dictionary,
+            "is_info" : boolwean,
+    } 
+    return render (request, 'favorites.html',tparams)
 
 
-def news(request):
+def fav_add(request):
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin') 
+    artist = request.GET['artist']
+    song = request.GET['song']
+    print(artist)
+    print(song)
+    try:
+        input = """import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:insertTrack("{}", "{}")""".format(artist, song) 
+        query = session.query(input)
+        res = query.execute()
+        query.close()
+    finally:
+        if session:
+            session.close()
+    if request.GET['type'] == 'trackpt':
+        return redirect('/trackport')
+    if request.GET['type'] == 'favorites':
+        return redirect('/favorites')
+    return redirect('/trackglobal') 
+
+def fav_remove(request): 
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        input = """import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:deleteTrack("{}", "{}")""".format(request.GET['song'], request.GET['artist']) 
+        query = session.query(input)
+        res = query.execute()
+        query.close()
+    finally:
+        if session:
+            session.close()
+    if request.GET['type'] == 'trackpt':
+        return redirect('/trackport')
+    if request.GET['type'] == 'favorites':
+        return redirect('/favorites')
+    return redirect('/trackglobal')
+
+def news(request): 
     response_billboard = urlopen(Request('https://www.billboard.com/feed/', headers={'User-Agent' : 'Mozilla/5.0'})).read().decode('utf-8')
     tree = etree.fromstring(response_billboard.encode('utf-8'))
     link = tree.xpath("/rss/channel/link")
@@ -123,12 +248,9 @@ def news(request):
         news_array.append([noticia.find('title').text ,
                            noticia.find('link').text ,
                            noticia.find('pubDate').text ,
-                           noticia.find('description', ns).text,
+                           re.compile(r'<[^>]+>').sub('', noticia.find('description', ns).text),
                            noticia.find('media:thumbnail', ns).xpath("@url")[0]])
     tparams = {
         'news': news_array,
     }
     return render(request, 'news.html', tparams) 
-
-
-

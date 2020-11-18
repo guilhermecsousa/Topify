@@ -7,7 +7,7 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h3>ÚLTIMA HORA:</h3>
+                    <h3 style="margin-top: 30px">BREAKING NEWS:</h3>
                     <br/>
                     <!-- Notícias -->
                     <div class="row">
@@ -22,14 +22,14 @@
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col mr-2">
                                                     <div class="text">
-                                                        {{ entry.3 }}
+                                                        {{ entry.3 | safe }}
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
                                                     <img src="{{entry.4}}"/>
                                                 </div>
                                             </div>
-                                            <a target="_blank" rel="nofollow" href="{{ entry.1 }}">Saber mais &rarr;</a>
+                                            <a target="_blank" rel="nofollow" href="{{ entry.1 }}">Know more &rarr;</a>
                                         </div>
                                     </div>
                                 </ul>

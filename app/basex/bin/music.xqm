@@ -46,6 +46,7 @@ declare function funcs:giveTopSongsGlobal() as node()
         <artist>{$t/artist/name/text()}</artist>
         <listeners>{$t/listeners/text()}</listeners>
         <playcount>{$t/playcount/text()}</playcount>
+        <mbid>{$t/mbid/text()}</mbid>
       </song>
  }
 </songs>
@@ -61,8 +62,48 @@ declare function funcs:giveTopSongsPT() as node()
         <artist>{$t/artist/name/text()}</artist>
         <listeners>{$t/listeners/text()}</listeners>
         <playcount>{$t/playcount/text()}</playcount>
+        <mbid>{$t/mbid/text()}</mbid>
       </song>
  }
 </songs>
 };
+
+
+declare updating function funcs:insertTrack($artist_nome,$track)
+{
+  let $f := doc(concat("musicastop_db/xml_artists_songs/artist_tracks_", replace($artist_nome, ' ', '_'), ".xml"))//track
+  let $playlist := doc("musicastop_db/playlist.xml")
+  for $a in $f where $a/name/text() = $track
+  return insert node (
+    <track>
+      <name>{$a/name/text()}</name>
+      <listeners> {$a/listeners/text()} </listeners>
+      <url> {$a/url/text()} </url>
+      <artist>
+         <name>{$a/artist/name/text()}</name>
+         <url>{$a/artist/url/text()}</url>
+       </artist>
+    </track>
+  ) as first into $playlist
+};  
+
+declare updating function funcs:deleteTrack($track, $artist_name)
+{
+  let $a := doc("musicastop_db/playlist.xml")//track
+  for $e in $a
+  return
+  for $b in $e where ($b/name/text() = $track  and $b/artist/name/text() = $artist_name)
+  return delete node $b
+}; 
+
+
+declare function funcs:trackFromPlaylist() as node()
+{
+  <tracks> {
+    for $a in doc("musicastop_db/playlist.xml")//track
+    return
+      $a   
+ } </tracks>
+};
+
 

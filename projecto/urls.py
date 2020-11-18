@@ -29,4 +29,6 @@ urlpatterns = [
     path('trackport/', views.trackport, name='trackport'),
     path('artistglobal/', views.artistglobal, name='artistglobal'),
     path('artistport/', views.artistport, name='artistport'),
+    path('fav_add/', views.fav_add, name='fav_add'),
+    path('fav_remove/', views.fav_remove, name='fav_remove')
 ]

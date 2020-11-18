@@ -1,5 +1,5 @@
 # Paths
-INPUTPATH = /home/guilhermecsousa/Desktop/EDC/proj1/EDC-TP1/app/xml
+INPUTPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml
 DATAPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
 WORKPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/
 PROJECTPATH = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
@@ -17,11 +17,11 @@ COLORBLUE = 6
 # Windows
 UPDATEVERSION = 9.4.4
 VIEWS = V H editor folder map plot - H info table tree explore - text - 
-GUISIZE0 = 1561
+GUISIZE0 = 1582
 GUISIZE1 = 1343
-GUILOC0 = 999
+GUILOC0 = 978
 GUILOC1 = 23
-MAXSTATE = true
+MAXSTATE = false
 SHOWBUTTONS = true
 SHOWINPUT = true
 SHOWSTATUS = true
@@ -79,7 +79,11 @@ MAXTEXT = 8388608
 MAXRESULTS = 500000
 
 # Search
-SEARCHED = 0
+SEARCHED = 4
+SEARCHED1 = Drak
+SEARCHED2 = rank
+SEARCHED3 = delete
+SEARCHED4 = :)
 REPLACED = 0
 
 # History
@@ -88,12 +92,22 @@ SEARCH = 0
 XQUERY = 0
 
 # Files
-EDITOR = 0
-INPUTS = 3
-INPUTS1 = /home/guilhermecsousa/Desktop/EDC/proj1/EDC-TP1/app/xml
+EDITOR = 6
+EDITOR1 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/hello-world.xq
+EDITOR2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/music.xqm
+EDITOR3 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm
+EDITOR4 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/basexserverstop.bat
+EDITOR5 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/webapp/chat/chat-util.xqm
+EDITOR6 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/ad.bxs
+INPUTS = 4
+INPUTS1 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml
 INPUTS2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/xml/
-INPUTS3 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
-OPEN = 0
+INPUTS3 = /home/guilhermecsousa/Desktop/EDC/proj1/EDC-TP1/app/xml
+INPUTS4 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/
+OPEN = 3
+OPEN1 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/music.xqm
+OPEN2 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/src/hello-world.xq
+OPEN3 = /Users/brunoaguiar/Desktop/universidade/4ano/EDC/EDC-TP1/app/basex/bin/music.xqm
 PROJECTS = 0
 PROJFILES = 0
 PROJCONTS = 0

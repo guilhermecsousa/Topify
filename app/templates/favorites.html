@@ -9,29 +9,33 @@
                 <div class="container-fluid">
 
                     <!-- DataTale -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">Minha lista</div>
-
+                    <div class="card shadow mb-4" style="margin-top: 50px">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">My Favorites</h6>
+                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Artist</th>
                                             <th>Song</th>
-                                            <th>Listeners</th>
+                                            <th>Artist</th>
+                                            <th> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {% if is_info %}
+                                        {% for track in info %}
                                         <tr>
-                                            <td style="width: 35%">Miley Cyrus</td>
-                                            <td style="width: 35%">Wrecking Ball</td>
-                                            <td style="width: 25%">320800</td>
+                                            <td style="width: 35%">{{ track.name }}</td>
+                                            <td style="width: 35%">{{ track.artist.name}}</td>
                                             <th style="width: 5%">
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm"/>
+                                                <a href="/fav_remove?song={{ track.name }}&artist={{ track.artist.name }}&type=favorites" class="btn btn-danger btn-circle btn-sm"/>
                                                 <i class="fas fa-trash"></i>
-                                            </th>
-                                        </tr>
+                                            </th> 
+                                        </tr> 
+                                        {% endfor %}
+                                        {% endif %}
                                     </tbody>
                                 </table>
                             </div>

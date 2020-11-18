@@ -2,67 +2,7 @@
 
 {% block content %}
 
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                {% for entry in news %}
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Notícia!</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Isto é uma notícia</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-lg-6 mb-4">
-                            <div class="card shadow mb-4">
-                                <div class="card bg-warning text-white shadow">
-                                    <div class="card-body">
-                                        <div class="text-center">
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 45rem;"
-                                                {% load static %}
-                                                 src="{% static 'assets/images/drake.jpg' %}"/>
-                                        </div>
-                                        <h3><b><a target="_blank" rel="nofollow" href="https://undraw.co/">DRAKE</a></b></h3><h5> 1º TOP GLOBAL</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card shadow mb-4">
-                                <div class="card bg-success text-white shadow">
-                                    <div class="card-body">
-                                        <div class="text-center">
-                                            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 45rem;"
-                                                {% load static %}
-                                                 src="{% static 'assets/images/chico.jpg' %}"/>
-                                        </div>
-                                        <h3><b><a target="_blank" rel="nofollow" href="https://undraw.co/">CHICO DA TINA</a></b></h3><h5> 1º TOP PORTUGAL</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End of Main Content -->
+    {% load static %}
+    <img src="{% static 'assets/images/back.jpg' %}" style="width: 150%; margin-left: -45%; margin-top: -20%"/>
 
 {% endblock %}

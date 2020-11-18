@@ -9,9 +9,15 @@
                 <div class="container-fluid">
 
                     <!-- DataTale -->
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4" style="margin-top: 50px">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Top Global - Faixas</h6>
+                            <div class="row">
+                                <div>
+                                    {% load static %}
+                                    <img src="{% static 'assets/images/globe.png' %}" style="margin-right: 10px; margin-bottom: 5px; margin-left: 15px"/>
+                                </div>
+                                <h6 class="m-0 font-weight-bold text-primary">Top Global - Tracks</h6>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -21,18 +27,26 @@
                                             <th>Song</th>
                                             <th>Artist</th>
                                             <th>Listeners</th>
+                                            <th> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {% for track in info %}
                                         <tr>
-                                            <td style="width: 40%">Toosie Slide</td>
-                                            <td style="width: 30%">Drake</td>
-                                            <td style="width: 25%">320800</td>
+                                            <td style="width: 40%">{{ track.name }}</td>
+                                            <td style="width: 30%">{{ track.artist }}</td>
+                                            <td style="width: 25%">{{ track.listeners }}</td>
                                             <th style="width: 5%">
-                                                <a href="#" class="btn btn-success btn-circle btn-sm"/>
-                                                <i class="fas fa-star"></i>
+                                                {% if track.in_fav  %}
+                                                    <a href="/fav_remove?song={{ track.name }}&artist={{ track.artist }}&type=trackglobal" class="btn btn-danger btn-circle btn-sm"/>
+                                                    <i class="fas fa-trash"></i>
+                                                {% else %}
+                                                    <a href="/fav_add?song={{ track.name }}&artist={{track.artist}}&type=trackglobal" class="btn btn-success btn-circle btn-sm"/>
+                                                    <i class="fas fa-star"></i>
+                                                {% endif %}
                                             </th>
                                         </tr>
+                                        {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
