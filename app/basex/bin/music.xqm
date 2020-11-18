@@ -2,14 +2,26 @@ module namespace funcs = 'com.funcs.music';
 
 declare function funcs:giveSomeInfo($artist_nome) as node()*
 {
-  <artistas> {
-    for $a in doc(concat("musicastop_db/xml_artists_info/artist_info_", $artist_nome,  ".xml"))//similar
-    let $name := $a/artist/name
-    return $name
- }
-</artistas>
+    for $a in doc(concat("musicastop_db/xml_artists_info/artist_info_", replace($artist_nome," ", "_"),  ".xml"))/lfm/artist
+    return 
+       <artista>
+         <name>
+            {$a/name/text()}
+            </name>
+          <listeners>
+            {$a/stats/listeners/text()}
+          </listeners>
+          <playcount>
+            {$a/stats/playcount/text()}
+          </playcount>
+          <sobre>
+            {$a/bio/summary/text()}
+          </sobre>
+          <similar>
+            {$a/similar/artist//name}
+          </similar>
+       </artista> 
 };
-
 declare function funcs:giveTopGlobal() as node()
 {
   <artistas> {

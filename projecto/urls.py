@@ -30,5 +30,6 @@ urlpatterns = [
     path('artistglobal/', views.artistglobal, name='artistglobal'),
     path('artistport/', views.artistport, name='artistport'),
     path('fav_add/', views.fav_add, name='fav_add'),
-    path('fav_remove/', views.fav_remove, name='fav_remove')
+    path('fav_remove/', views.fav_remove, name='fav_remove'),
+    path('semelhantes/', views.generate_xslt, name='semelhantes'),
 ]

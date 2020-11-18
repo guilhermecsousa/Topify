@@ -19,15 +19,12 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h2>NOME</h2>
+                                        <h2>{{info.name}}</h2>
                                         <div class="table-responsive">
                                             <table class="table table-borderless" id="dataTable" width="100%" cellspacing="0">
                                                 <tbody>
-                                                    <tr><td><b>Listeners:</b></td><td>VALOR</td></tr>
-                                                    <tr><td><b>Playcount:</b></td><td>VALOR</td></tr>
-                                                    <tr><td><b>Álbuns:</b></td><td>VALOR</td></tr>
-                                                    <tr><td><b>Sobre:</b></td><td>VALOR</td></tr>
-                                                    <tr><td><b>Semelhantes:</b></td><td>VALOR</td></tr>
+                                                    <tr><td><b>Listeners:</b></td><td>{{info.listeners}}</td></tr>
+                                                    <tr><td><b>Playcount:</b></td><td>{{info.playcount}}</td></tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -36,7 +33,13 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+                <h3>About: </h3> </br> {{info.sobre | safe }}
+                </br>
+                </br>
+                <b> <a href="/semelhantes?name={{info.name}}"> See Similar Artists</a></b>
+                {{temp }}
             </div>
         </div>
     <!-- End of Main Content -->

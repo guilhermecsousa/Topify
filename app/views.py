@@ -14,7 +14,7 @@ from BaseXClient import BaseXClient
 import os
 import re
 from django.shortcuts import redirect
-
+import webbrowser
 def index(request):
 
     return render(request, 'index.html')
@@ -168,9 +168,34 @@ def trackport(request):
 
 
 def artist(request):
+    session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')
+    try:
+        if request.GET['name'] != None:
+            input = """import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:giveSomeInfo("{}")""".format(request.GET['name'])
+        query = session.query(input)
+        res = query.execute()
+        
+        query.close()
+    finally:
+        if session:
+            session.close()
 
-    return render(request, 'artist.html')
+    tparams = {
+        "info" : xmltodict.parse(res)['artista'],
+    }
+    return render(request, 'artist.html', tparams)
 
+def generate_xslt(request):
+    dom = etree.parse('app/xml/xml_artists_info/artist_info_' + request.GET['name'].replace(' ', '_') + '.xml')
+    xslt = etree.parse('app/artist.xsl')
+    transform = etree.XSLT(xslt)
+    template = transform(dom)
+    strng = etree.tostring(template).decode('utf-8')
+    with open('app/templates/xslt.html', "w") as f: #., ), 
+          print(type(strng))
+          f.write(strng)
+          webbrowser.open_new_tab('app/templates/xslt.html')
+    return render(request, 'xslt.html')
 
 def favorites(request):
     session = BaseXClient.Session('localhost', 1984, 'admin', 'admin')

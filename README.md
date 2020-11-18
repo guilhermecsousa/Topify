@@ -6,8 +6,8 @@ java -jar BaseX.jar
 cd bin
 ./basexserver
 
-çs
-METER SERVER BEM:
+CONFIGURAR BASEX:
+1. ir a pasta do jar: 
 preferences
 definir database path para o teu
 database properties, ver se o path esta a dar direito 

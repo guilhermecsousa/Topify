@@ -31,7 +31,7 @@
                                     <tbody>
                                         {% for artist in info %}
                                         <tr>
-                                            <td style="width: 30%">{{ artist.name }}</td>
+                                            <td style="width: 30%"><a href="/artist?name={{artist.name}}"> {{ artist.name }} </a></td>
                                             <td style="width: 25%">{{ artist.listeners }}</td>
 {#                                            <th style="width: 5%">#}
 {#                                                <a href="" class="btn btn-success btn-circle btn-sm"/>#}

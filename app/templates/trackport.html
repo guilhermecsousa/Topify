@@ -27,13 +27,14 @@
                                             <th>Song</th>
                                             <th>Artist</th>
                                             <th>Listeners</th>
+                                            <th> </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {% for track in info %}
                                         <tr>
                                             <td style="width: 40%">{{ track.name }}</td>
-                                            <td style="width: 30%">{{ track.artist }}</td>
+                                            <td style="width: 30%"><a href="/artist?name={{track.artist}}"> {{ track.artist }} </a></td>
                                             <td style="width: 25%">{{ track.listeners }}</td>
                                             <th style="width: 5%">
                                                 {% if track.in_fav  %}
