@@ -178,19 +178,28 @@ def favorites(request):
         input = "import module namespace funcs='com.funcs.music' at 'music.xqm'; funcs:trackFromPlaylist()"
         query = session.query(input)
         res = query.execute()
-        print(res)
         query.close()
     finally:
         if session:
             session.close()
     dictionary = dict()
-    boolwean = False  
+    boolwean = False 
+    is_only_one = False
     if res != None and res != '' and res != "<tracks/>":
         dictionary = xmltodict.parse(res)['tracks']['track']
+        try:
+            for s in dictionary:
+                print(s['name'])
+                print("ola")
+        except:
+            print(dictionary)            
+            print("Adeus, ola2")
+            is_only_one = True
         boolwean = True
     tparams = {
             "info" : dictionary,
             "is_info" : boolwean,
+            "is_only_one" : is_only_one
     } 
     return render (request, 'favorites.html',tparams)
 

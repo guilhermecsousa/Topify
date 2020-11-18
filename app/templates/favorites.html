@@ -25,16 +25,29 @@
                                     </thead>
                                     <tbody>
                                         {% if is_info %}
-                                        {% for track in info %}
-                                        <tr>
-                                            <td style="width: 35%">{{ track.name }}</td>
-                                            <td style="width: 35%">{{ track.artist.name}}</td>
-                                            <th style="width: 5%">
-                                                <a href="/fav_remove?song={{ track.name }}&artist={{ track.artist.name }}&type=favorites" class="btn btn-danger btn-circle btn-sm"/>
-                                                <i class="fas fa-trash"></i>
-                                            </th> 
-                                        </tr> 
-                                        {% endfor %}
+                                            {% for track in info %}
+                                                {% if track.name != None %}
+                                                    <tr>
+                                                        <td style="width: 35%">{{ track.name }}</td>
+                                                        <td style="width: 35%">{{ track.artist.name}}</td>
+                                                        <th style="width: 5%">
+                                                            <a href="/fav_remove?song={{ track.name }}&artist={{ track.artist.name }}&type=favorites" class="btn btn-danger btn-circle btn-sm"/>
+                                                            <i class="fas fa-trash"></i>
+                                                        </th> 
+                                                    </tr> 
+                                                {% endif %}
+                                            {% endfor %}
+                                            {% if is_only_one %}
+                                                <tr>
+                                                        <td style="width: 35%">{{ info.name }}</td>
+                                                        <td style="width: 35%">{{ info.artist.name}}</td>
+                                                        <th style="width: 5%">
+                                                            <a href="/fav_remove?song={{ info.name }}&artist={{ info.artist.name }}&type=favorites" class="btn btn-danger btn-circle btn-sm"/>
+                                                            <i class="fas fa-trash"></i>
+                                                        </th> 
+                                                    </tr> 
+
+                                            {% endif %}
                                         {% endif %}
                                     </tbody>
                                 </table>
